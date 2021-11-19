@@ -13,22 +13,17 @@ engine.runAndWait()
 def validar(mensagem):
     return True
 
-def repitirAudio(mensagem):
-    audio = engine.say(mensagem.text)
-    engine.runAndWait()
-    return audio
-
 def id(mensagem):
     return mensagem.chat.id
 
-@bot.message_handler(commands=['start'])
-def start(mensagem):
-    bot.send_message(id(mensagem), "Mandando audio")
-    bot.send_audio(chat_id=id(mensagem), audio=open('audio/ola.mp3', 'rb'))
+def salvarAudio(mensagem):
+    engine.save_to_file(f"{mensagem.text}", f"audio/audio.mp3")
     engine.runAndWait()
 
 @bot.message_handler(func=validar)
 def responder(mensagem):
-    bot.reply_to(mensagem, 'Olá, Digite /start para começar')
+    bot.reply_to(mensagem, f"Olá {mensagem.chat.first_name} {mensagem.chat.last_name} esse bot foi programado para tudo que você mandar escrito ele te responder em formato de audio")
+    salvarAudio(mensagem)
+    bot.send_audio(chat_id=id(mensagem), audio=open(f'audio/audio.mp3', 'rb'))
 
 bot.polling()
