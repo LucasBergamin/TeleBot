@@ -5,4 +5,5 @@ TeleBot junto com outras diversas bibliotecas como textblob, pyttsx3, selenium, 
 ## Branch pyttsx3
 - Contém o BotRepetidorAudio
 - Contém o BotMandaOla
+- Contém o BotTradutor
 
