@@ -4,7 +4,7 @@ import pyttsx3
 CHAVE_API = "2098648256:AAEFf1rs0sxMCAaGCbrADSDWpmEdnsL2QsI"
 bot = telebot.TeleBot(CHAVE_API)
 engine = pyttsx3.init()
-
+ 
 engine.setProperty("voice", "brazil")
 engine.setProperty("rate", 190)
 engine.setProperty("volume", 1.)
