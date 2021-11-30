@@ -4,16 +4,16 @@ TeleBot junto com outras diversas bibliotecas como textblob, pyttsx3, selenium, 
 
 Para cada biblioteca foi criada uma branch diferente
 ## Branch Main
---> Contém apenas o primeiro telebot
+- Contém apenas o primeiro telebot
 ## Branch textblob
---> Contém o BotTradutor
+- Contém o BotTradutor
 ## Branch pytube
---> Contém o BotYoutube
+- Contém o BotYoutube
 ## Branch Selenium
---> Contém o BotPrevisãoTempo
+- Contém o BotPrevisãoTempo
 ## Branch pyttsx3
---> Contém o BotRepetidorAudio
---> Contém o BotMandaOla
+- Contém o BotRepetidorAudio
+- Contém o BotMandaOla
 ## Branch sqlite3
---> Contém o BotCadastroUsuario
---> Contém arquivo com algumas funções de SQLITE para não precisar ficar repetindo
+- Contém o BotCadastroUsuario
+- Contém arquivo com algumas funções de SQLITE para não precisar ficar repetindo
