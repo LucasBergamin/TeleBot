@@ -34,6 +34,7 @@ def validarUsuario(mensagem):
 
 @bot.message_handler(commands="cadastro")
 def apelidoUsuario(mensagem):
+    sqlite.executando_query(conexao, f" INSERT INTO users (id_chat) VALUES ({id(mensagem)});")
     msg = bot.send_message(id(mensagem), "Para começar me diga como posso te chamar?")
     bot.register_next_step_handler(msg, idadeUsuario)
 
@@ -80,8 +81,6 @@ Olá, em minha base de daoos que essa é sua primeira vez conosco :)
 Vamos criar seu cadastro?
     --> /cadastro
         """
-        criando_usuario = f" INSERT INTO users (id_chat) VALUES ({id(mensagem)});"
-        sqlite.executando_query(conexao, criando_usuario)
         bot.reply_to(mensagem, text)
 
 bot.polling()
